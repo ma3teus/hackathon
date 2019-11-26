@@ -4,9 +4,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import api from './services/API'
 
 
-
-
-
 function App() {
   const [ dataTable, setdataTable ] = useState([])
 
@@ -48,9 +45,6 @@ function App() {
       sortable: true,
     },
   ];
-  
-   
-
   
   return (
     <div className="App">  
