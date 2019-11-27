@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Datatable from 'react-data-table-component'
-import { Container, Row, Col } from 'react-grid-system';
+import { Row, Col } from 'react-grid-system';
 import api from './services/API'
+import Menu from './components/menu'
 
 
 function App() {
@@ -46,24 +47,30 @@ function App() {
     },
   ];
   
+  const styleMenu = {
+    heigth: "100vh"
+  }
+
+
   return (
     <div className="App">  
-    <Container>
-      <Row>
-        <Col sm={1}>
-          Menu
+    <Row>
+        <Col sm={2} style={styleMenu}>
+          <Menu />
+        
         </Col>
-        <Col sm={11}>
+        <Col sm={10} >
           <Datatable 
-            title="Teste"
+            title="Dashboard"
             columns={columns}
             data={dataTable}
           />
         </Col>
-      </Row>
-    </Container>          
+      </Row>         
     </div>
   );
 }
+
+
 
 export default App;
